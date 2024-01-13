@@ -1,0 +1,115 @@
+html {
+  background: #f8f2f3;
+  color: #0c0910;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.running-time {
+  font-family: monospace;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  button {
+    width: 6rem;
+    font-size: 1.2em;
+    background: #ddbfbb;
+    border-color: #c89992;
+    border-style: solid;
+    border-radius: 4px;
+    color: #5f3530;
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+
+  .note {
+    display: grid;
+    grid-template-columns: 7rem 20rem 7rem;
+    gap: 2rem;
+
+    .timecode {
+      font-family: monospace;
+      text-align: right;
+      font-weight: bold;
+      color: #5f3530;
+    }
+
+    .text {
+      width: 14rem;
+      text-align: left;
+      color: #1a110f;
+    }
+  }
+
+  .new-note {
+    form {
+      display: grid;
+      grid-template-columns: 7rem 20rem 7rem;
+      gap: 2rem;
+    }
+
+    input {
+      display: inline-block;
+      font-size: 1em;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    input[name="timecode"] {
+      border: none;
+      text-align: right;
+      font-family: monospace;
+      color: #4e322c;
+      background: none;
+
+      &.active {
+        color: #5f3530;
+        font-weight: bold;
+      }
+    }
+
+    input[name="text"] {
+      box-sizing: border-box;
+      height: 2rem;
+    }
+
+    input[type="submit"] {
+      width: 7rem;
+      line-height: initial;
+      height: 2rem;
+      background: #b4746a;
+      border-color: #95554b;
+      border-radius: 4px;
+      border-style: solid;
+      color: #0d0807;
+
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
